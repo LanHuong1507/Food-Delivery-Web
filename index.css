@@ -58,6 +58,7 @@ a {
     color: #101010;
     font-size: 22px;
     font-weight: 600;
+    font-family: 'Inter', sans-serif;
 }
 
 .navbar-menu {
@@ -72,6 +73,7 @@ a {
 .navbar-menu li {
     cursor: pointer;
     transition: color 0.3s;
+    font-family: 'Inter', sans-serif;
 }
 
 .navbar-menu li:hover {
@@ -89,7 +91,6 @@ a {
     color: #fff;
     border: none;
     padding: 8px 16px;
-    /* Adjusted padding for a more compact button */
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
@@ -103,7 +104,6 @@ a {
 .navbar-menu-right .cart-icon-container {
     background-color: #ff5722;
     padding: 8px;
-    /* Adjusted padding for the cart icon container */
     border-radius: 12px;
     display: inline-flex;
     align-items: center;
@@ -111,9 +111,8 @@ a {
 }
 
 .navbar-menu-right .cart-icon-wrapper {
-    background-color: #fff;
     padding: 4px;
-    /* Reduced padding for better fit */
+    background-color: #fff;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -123,7 +122,122 @@ a {
 .navbar-menu-right .cart-icon {
     color: #ff5722;
     font-size: 24px;
-    /* Increased font size for better visibility */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.header-left {
+    max-width: 40%;
+    padding: 30px;
+    margin-top: 10px;
+}
+.header-left p {
+    font-family: 'Seaweed Script', cursive;
+    font-size: 44px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #FF4415;
+}
+.header-left h1 {
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 72px;
+}
+.header-left h5 {
+    color: #646464;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 10px;
+}
+.location {
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; 
+}
+
+.location form {
+    display: flex;
+    align-items: center;
+}
+
+.input-container {
+    position: relative;
+    flex: 1;
+}
+
+.input-container input[type="text"] {
+    width: 100%;
+    padding: 20px 30px;
+    border: 1px solid #00BE4C;
+    border-right: none;
+    border-radius: 15px 0 0 15px;
+    font-size: 16px;
+}
+
+.input-container .input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #b1b1b1;
+    pointer-events: none; 
+}
+
+.location button {
+    padding: 10px 20px;
+    border: 1px solid #ddd; 
+    border-radius: 0 15px 15px 0;
+    background: linear-gradient(92.18deg, #3FDA7D 48.17%, #00BE4C 100%);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.location button .button-icon {
+    width: 38px;
+    height: 38px;
+    background-color: white;
+    color: #00BE4C;
+    border-radius: 10px; 
+    padding: 5px;
+    font-size: 18px;
+    align-items: center;
+   padding-top: 10px;
+   margin-left: 8px;
+}
+.header-left .sign{
+    margin-top: 20px;
+}
+.header-left .sign p1{
+    color: #646464;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+}
+.sign span{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: tomato;
+}
+.header-right img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Media Queries for Responsive Design */
@@ -172,5 +286,4 @@ a {
             gap: 10px;
         }
     }
-
 }

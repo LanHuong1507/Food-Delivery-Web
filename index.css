@@ -1,0 +1,176 @@
+/* Global Reset and Basic Styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* App Container */
+.app {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 20px 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.logo-container p {
+    color: #101010;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #232323;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navbar-menu li:hover {
+    color: #007bff;
+}
+
+.navbar-menu-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-menu-right button {
+    background: linear-gradient(180deg, #1a1a1a 0%, #333 46.01%, #000 100%);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    /* Adjusted padding for a more compact button */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.navbar-menu-right button:hover {
+    background: linear-gradient(180deg, #333 0%, #444 46.01%, #111 100%);
+}
+
+.navbar-menu-right .cart-icon-container {
+    background-color: #ff5722;
+    padding: 8px;
+    /* Adjusted padding for the cart icon container */
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-menu-right .cart-icon-wrapper {
+    background-color: #fff;
+    padding: 4px;
+    /* Reduced padding for better fit */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-menu-right .cart-icon {
+    color: #ff5722;
+    font-size: 24px;
+    /* Increased font size for better visibility */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet and Mobile Landscape */
+@media (max-width: 1024px) {
+    .navbar-menu {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .navbar-menu-right button {
+        padding: 8px 12px;
+    }
+
+    .navbar-menu-right .cart-icon-container {
+        padding: 6px;
+
+        .navbar-menu-right .cart-icon {
+            font-size: 20px;
+        }
+    }
+
+    /* Mobile Portrait */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .navbar-menu {
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .navbar-menu li {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .navbar-menu-right {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+}

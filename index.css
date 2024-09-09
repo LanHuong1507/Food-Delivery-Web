@@ -8,6 +8,7 @@
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 a {
@@ -15,26 +16,9 @@ a {
     color: inherit;
 }
 
-/* App Container */
-.app {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Fade-In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 /* Navbar Styles */
 .navbar {
+    width: 100%;
     padding: 20px 90px;
     display: flex;
     justify-content: space-between;
@@ -130,6 +114,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    margin-bottom: 60px;
+    margin-top: 40px;
 }
 
 .header-left {
@@ -165,6 +151,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
+    background-color: none;
 }
 
 .location form {
@@ -197,7 +184,7 @@ a {
 }
 
 .location button {
-    padding: 10px 20px;
+    padding:15px 25px;
     border: 1px solid #ddd;
     border-radius: 0 15px 15px 0;
     background: linear-gradient(92.18deg, #3FDA7D 48.17%, #00BE4C 100%);
@@ -210,18 +197,16 @@ a {
     justify-content: center;
 }
 
-
-
 .location button .button-icon {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
     background-color: white;
     color: #00BE4C;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     font-size: 18px;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 5px;
     margin-left: 8px;
 }
 
@@ -249,11 +234,133 @@ a {
     height: auto;
 }
 
+/*Subcribes*/
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    padding: 50px 70px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15px;
+    background: linear-gradient(120deg, #FF4415 60%, #FEB618 40%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow with more blur */
+}
+
+/* Left Section */
+.subscribe-left {
+    flex: 1;
+    color: white;
+}
+
+.subscribe-left h3 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+
+.subscribe-left p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 28px;
+}
+
+/* Right Side */
+.subscribe-right {
+    flex: 1;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-left: 20px; 
+}
+
+#subscribe-form {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+#subscribe-form input[type="text"] {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 16px 0 0 16px;
+    width:100%;
+    height: 60px;
+    font-size: 16px;
+    outline: none;
+    background-color: #F5F5F5;
+}
+
+#subscribe-form button[type="submit"] {
+    padding: 12px 20px;
+    background-color:#2FB652;
+    color: white;
+    border: none;
+    height: 60px;
+    border-radius: 0 16px 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#subscribe-form button[type="submit"] .button-icon {
+    margin-left: 10px;
+    padding-top: 5px;
+    font-size: 14px;
+    justify-content: center;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    color: #2FB652;
+    border-radius: 10px;
+}
+
+#subscribe-form button[type="submit"]:hover {
+    background-color: #2FB652; /* Change background color on hover */
+}
+
+/*Countries*/
+.countries-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width:100%;
+    justify-content: center;
+    margin: 60px 80px;
+}
+
+.heading {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 700;
+    color: #101010;
+}
+
+.country-column {
+    flex: 1 1 22%;
+    display: flex;
+    flex-direction: column;
+}
+
+.country {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #666666;
+    line-height: 21.78px;
+}
+
 /*Footer*/
 .footer {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-top: 1px solid #ddd;
+    background-color: #F8F8F8;
+    padding: 30px 30px; 
 }
 
 .footer .container {
@@ -264,260 +371,205 @@ a {
 
 .footer .column {
     flex: 1;
-    margin: 30px;
+    margin: 20px; 
+    padding: 20px; 
 }
-
-.footer .column p {
-    color: #333;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 30px;
-    margin-bottom: 10px;
-}
-
-.footer .column h3 {
-    margin-bottom: 30px;
-}
-
-.footer .column a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-    line-height: 16.94px;
-    display: block;
-}
-
-.footer .column a:hover {
-    text-decoration: underline;
-}
-
-.footer .copyright {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 60px 0 20px;
-    font-size: 0.9em;
-    color: #666;
-}
-
 .footer .footer-logo {
     display: flex;
     align-items: center;
+    flex-direction: row;
     margin-bottom: 20px;
 }
-
-.footer .footer-logo img {
-    width: 30px;
-    height: 28px;
+.footer .logo {
+    width: 40px;
+    height: auto;
     border-radius: 8px;
     margin-right: 15px;
 }
-
-.footer .footer-logo p {
+.footer .footer-logo p1 {
     color: #101010;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 600;
+    padding-top:5px;
+    padding-left: 10px;
 }
-
+.footer .column p {
+    color: #666666;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.footer .column h3 {
+    color: #101010;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.footer .column a{
+    color: #666666;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    display: block;
+}
 .footer .social-media-icon {
     display: flex;
-    justify-content: flex-start;
     gap: 15px;
-    padding-top: 10px;
+    flex-direction: row;
+    margin-top: 20px;
 }
-
 .footer .social-media-icon a {
     color: white;
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
+    background-color: #252525;
+    padding: 10px;
+    font-size:15px;
     transition: color 0.3s;
-    background-color: #101010;
-    padding: 5px;
+    border-radius: 4px;
+}
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 13px;
 }
 
-.footer .social-media-icon a:hover {
-    color: #007bff;
+.copyright .left {
+    text-align: left;
 }
 
-/* Media Queries for Responsive Design */
+.copyright .right {
+    text-align: right;
+}
 
-/* Tablet and Mobile Landscape */
-/* Tablet and Mobile Landscape */
 @media (max-width: 1024px) {
-
-    /* Navbar */
-    .navbar-menu {
-        gap: 15px;
-        font-size: 14px;
-    }
-
-    .navbar-menu-right button {
-        padding: 8px 12px;
-    }
-
-    .navbar-menu-right .cart-icon-container {
-        padding: 6px;
-    }
-
-    .navbar-menu-right .cart-icon {
-        font-size: 20px;
-    }
-
-    /* Header */
-    .header-left h1 {
-        font-size: 52px;
-        line-height: 62px;
-    }
-
-    .header-left p {
-        font-size: 38px;
-        line-height: 44px;
-    }
-
-    .header-left h5 {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .location button {
-        padding: 8px 16px;
-    }
-
-    .location button .button-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 16px;
-    }
-
-    .header-left .sign p1 {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .sign span {
-        font-size: 16px;
-        line-height: 26px;
-    }
-
-    .header-right {
-        width: 100%;
-    }
-}
-/* Media Query for devices with max-width: 768px */
-@media (max-width: 768px) {
+    /* Adjust Navbar for smaller screens */
     .navbar {
-        flex-direction:column;
-        padding: 10px;
+        padding: 20px 20px;
     }
 
     .navbar-menu {
-        margin-top: 20px;
-        flex-direction: row;
-        gap: 10px;
+        flex-direction: column;
+        gap: 15px;
         align-items: center;
-        width: 100%;
-    }
-
-    .navbar-menu li {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
     }
 
     .navbar-menu-right {
-        margin-top: 20px;
-        flex-direction:row;
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
 
-    /* Adjust header for smaller screens */
     .header {
         flex-direction: column;
         align-items: center;
+    }
+
+    .header-left, .header-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Subscribe Section Adjustments */
+    .subscribe {
+        flex-direction: column;
         padding: 20px;
+        width: 90%;
     }
 
-    .header-left {
-        max-width: 100%;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .header-left h1 {
-        font-size: 36px;
-        line-height: 44px;
-    }
-
-    .header-left p {
-        font-size: 28px;
-        line-height: 34px;
-    }
-
-    .header-left h5 {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    /* Make input field bigger and button smaller */
-    .location input[type="text"] {
+    .subscribe-left, .subscribe-right {
         width: 100%;
-        padding: 16px;
-        font-size: 18px;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
-    .location button {
-        padding: 8px 16px;
+    .subscribe-right {
+        padding-left: 0; /* Remove left padding on smaller screens */
+    }
+
+    #subscribe-form {
+        width: 70%;
+        flex-direction:row;
+    }
+
+    #subscribe-form input[type="text"] {
+        padding: 15px 10px;
         font-size: 14px;
-    }
-
-    .location .input-icon {
-        font-size: 16px;
-    }
-
-    /* Adjust image in the header */
-    .header-right img {
-        max-width: 100%;
+        border-radius:10px 0 0 10px;
         height: auto;
-    }
-
-    /* Footer layout for smaller screens */
-    .footer .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer .column {
-        width: 100%;
-        margin: 10px 0;
-        text-align: center;
-    }
-    .footer-logo {
         margin-bottom: 10px;
-        justify-content: center;
-    }
-    .footer-logo img {
-        width: 30px;
-        height: 28px;
-        border-radius: 8px;
-        margin-right: 15px;
-    }
-    .footer-logo p {
-        color: #101010;
-        font-size: 22px;
-        font-weight: 600;
-        padding-top: 10px;
-    }
-    .footer .social-media-icon {
-        justify-content: center;
     }
 
-    .footer .copyright {
-        flex-direction: column;
-        text-align: center;
-        margin: 20px 0;
+    #subscribe-form button[type="submit"] {
+        padding:12px 15px;
+        font-size: 14px;
+        border-radius: 0 10px 10px 0;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    #subscribe-form button[type="submit"] .button-icon {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .countries-container {
+        margin: 30px 20px;
     }
 }
-
+@media (max-width: 768px){
+    .header-left h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .header-left h5 {
+        font-size: 16px;
+    }
+    .header-left p {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .header-left .sign p1 {
+        font-size: 16px;
+    }
+    .header-left .sign span {
+        font-size: 16px;
+    }
+    .header-right img {
+        max-width: 80%;
+    }
+    .subscribe-left h3 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .subscribe-left p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .subscribe-right {
+        padding-left: 0;
+    }
+    .subscribe-right #subscribe-form {
+        width: 100%;
+    }
+    .subscribe-right #subscribe-form input[type="text"] {
+        padding: 15px 10px;
+        font-size: 14px;
+        border-radius: 10px 0 0 10px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .subscribe-right #subscribe-form button[type="submit"] {
+        padding: 12px 15px;
+        font-size: 14px;
+        border-radius: 0 10px 10px 0;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .subscribe-right #subscribe-form button[type="submit"] .button-icon {
+        margin-left: 5px;
+        font-size: 12px;
+    }
+    .countries-container {
+        margin: 30px 10px;
+    }
+}

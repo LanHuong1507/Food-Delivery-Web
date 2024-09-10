@@ -233,6 +233,119 @@ a {
     max-width: 100%;
     height: auto;
 }
+/*Feature*/
+.feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 50px 40px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+    
+}
+.feature-left h3{
+    color: #101010;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.feature-left i{
+    color: #FF4415;
+    font-size: 40px;
+}
+.feature-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; 
+    padding-right: 20px; 
+}
+
+.feature-right button {
+    border: none;
+    color: #C4C4C4;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    border-radius: 29px;
+    background-color: white;
+}
+
+.feature-right button:hover {
+    background-color: #f0f0f0;
+}
+
+.feature-right .feature-button {
+    font-size: 12px;
+    background-color: black;
+}
+.feature-items {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.feature-item {
+    display: flex;
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box; 
+    border-radius: 24px; 
+    background-color: #f6f6f6; 
+    padding: 10px;
+    height: 130px;
+    width: 270px;
+}
+.feature-item-left {
+    flex: 1;
+    padding-right: 10px; 
+}
+
+.feature-item-right {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.feature-item-right img {
+    width: 150px;
+    height: 150px;
+    margin-top: -30px;
+}
+
+.feature-item-left h4,
+.feature-item-left h5,
+.feature-item-left h6 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.feature-item-left h4 {
+    font-size: 24px; 
+    font-weight: 700;
+    color: #171717;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.feature-item-left h5 {
+    font-size: 18px; 
+    font-weight: 500;
+    line-height: 25px;
+    color: #969696;
+}
+
+.feature-item-left h6 {
+    font-size: 18px;
+    font-weight: 600; 
+    color: #FF4415;
+    line-height: 25px; 
+}
 
 /*Subcribes*/
 .subscribe {

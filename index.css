@@ -1531,7 +1531,6 @@ a {
         flex-direction: column;
         padding: 30px 20px;
         height: auto;
-        /* Adjust height for smaller screens */
     }
 
     .service-base-left {
@@ -1747,36 +1746,40 @@ a {
     }
 
     .subscribe-right #subscribe-form {
+        display: flex; 
         width: 100%;
         margin: 0;
     }
-
+    
     .subscribe-right #subscribe-form input[type="text"] {
         padding: 15px 10px;
         font-size: 14px;
         border-radius: 10px 0 0 10px;
         height: auto;
-        margin: 0 10px 10px 0;
-        width: calc(100% - 120px); /* Adjust width to account for button */
+        margin: 0;
+        flex-grow: 1; 
+        box-sizing: border-box; 
     }
-
+    
     .subscribe-right #subscribe-form button[type="submit"] {
-        padding: 12px 15px;
+        padding: 12px 16px;
         font-size: 14px;
         border-radius: 0 10px 10px 0;
         height: auto;
         margin: 0;
-        width: 100px;
+        width: auto;
     }
-
+    
     .subscribe-right #subscribe-form button[type="submit"] .button-icon {
         margin-left: 5px;
         font-size: 12px;
+        padding: 5px;
     }
-
+    
     .countries-container {
         text-align: center;
         margin: 0;
+        margin-top: 20px;
     }
 
     .country-column {
@@ -1845,11 +1848,13 @@ a {
     }
 
     .service-base {
+        margin-top: 20px;
         padding: 0;
         text-align: center;
     }
 
     .service-base-left h3 {
+        padding-top: 50px;
         font-size: 28px;
         margin: 0;
     }
@@ -2000,6 +2005,7 @@ a {
     .footer {
         width: 100%;
         text-align: center;
+        margin-top: 20px;
     }
 
     .footer .container {

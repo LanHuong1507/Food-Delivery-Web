@@ -1501,8 +1501,7 @@ a {
     }
 
     .feature2 {
-        width: 85%;
-        margin-left: 40px;
+        width:100%;
     }
 
     .feature2-left-l {
@@ -1853,7 +1852,7 @@ a {
     }
 
     .feature2 {
-        margin-left: 20px;
+        width: 100%;
     }
 
     .feature2-left {
@@ -1934,7 +1933,7 @@ a {
     }
 
     .footer {
-        padding: 20px 10px;
+        width: 100%;
     }
 
     .footer .container {

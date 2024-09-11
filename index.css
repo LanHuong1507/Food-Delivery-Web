@@ -1646,23 +1646,33 @@ a {
 }
 
 @media (max-width: 768px) {
-    body{
+    html, body {
+        width: 100%;
+        overflow-x: hidden; 
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
+
     .navbar {
-        padding: 10px 20px;
+        padding-top:20px;
+        width: 100%;
+        text-align: center;
     }
 
-    .navbar-menu {
-        display: none;
-    }
-
-    .navbar-menu-right {
+    .navbar-menu, .navbar-menu-right {
         display: none;
     }
 
     .mobile-menu-icon {
         display: block;
+        text-align: center;
     }
 
     .mobile-navbar-menu {
@@ -1676,12 +1686,17 @@ a {
     .header {
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
 
     .header-left {
         max-width: 100%;
-        padding: 10px;
         text-align: center;
+        padding: 0;
+    }
+
+    .header-left h1, .header-left p, .header-left h5 {
+        margin-top:10px;
     }
 
     .header-left h1 {
@@ -1701,30 +1716,39 @@ a {
 
     .location {
         width: 100%;
-        margin-top: 20px;
+        text-align: center;
+        margin-top: 10px;
     }
 
     .header-right img {
-        margin-left: 20px;
         width: 90%;
+        margin: 0;
+    }
+
+    .subscribe-left {
+        text-align: center;
     }
 
     .subscribe-left h3 {
         font-size: 30px;
         line-height: 36px;
+        margin: 0;
     }
 
     .subscribe-left p {
         font-size: 14px;
         line-height: 24px;
+        margin: 0;
     }
 
     .subscribe-right {
-        padding-left: 0;
+        padding: 0;
+        text-align: center;
     }
 
     .subscribe-right #subscribe-form {
         width: 100%;
+        margin: 0;
     }
 
     .subscribe-right #subscribe-form input[type="text"] {
@@ -1732,7 +1756,8 @@ a {
         font-size: 14px;
         border-radius: 10px 0 0 10px;
         height: auto;
-        margin-bottom: 10px;
+        margin: 0 10px 10px 0;
+        width: calc(100% - 120px); /* Adjust width to account for button */
     }
 
     .subscribe-right #subscribe-form button[type="submit"] {
@@ -1740,7 +1765,8 @@ a {
         font-size: 14px;
         border-radius: 0 10px 10px 0;
         height: auto;
-        margin-bottom: 10px;
+        margin: 0;
+        width: 100px;
     }
 
     .subscribe-right #subscribe-form button[type="submit"] .button-icon {
@@ -1749,72 +1775,100 @@ a {
     }
 
     .countries-container {
-        margin: 20px;
+        text-align: center;
+        margin: 0;
     }
 
     .country-column {
         flex: 1 1 45%;
+        text-align: center;
     }
 
     .heading {
         font-size: 24px;
+        margin: 0;
     }
 
     .country {
         font-size: 16px;
+        margin: 0;
+    }
+
+    .service {
+        text-align: center;
     }
 
     .service h1 {
         font-size: 42px;
         line-height: 48px;
+        margin: 0;
     }
 
     .service p {
         font-size: 32px;
         line-height: 36px;
+        margin: 0;
     }
 
     .service-items {
         flex-direction: column;
-        margin: 30px 20px;
+        margin: 0;
+        padding: 0;
     }
 
     .service-item {
         width: 100%;
         height: 200px;
         gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .service-item img {
         width: 80px;
         height: 80px;
         padding-bottom: 15px;
+        margin: 0;
     }
 
     .service-item h4 {
         font-size: 22px;
         line-height: 28px;
+        margin: 0;
     }
 
     .service-item span {
         font-size: 14px;
         line-height: 24px;
+        margin: 0;
     }
 
     .service-base {
-        padding: 20px 15px;
+        padding: 0;
+        text-align: center;
     }
 
     .service-base-left h3 {
         font-size: 28px;
+        margin: 0;
     }
 
     .service-base-left p4 {
         font-size: 14px;
+        margin: 0;
     }
 
     .service-base-right {
         gap: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-base-right .s5, .service-base-right .s6 {
+        margin: 0;
     }
 
     .service-base-right .s5 {
@@ -1830,11 +1884,10 @@ a {
     .feature1-items {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 50px;
-        margin-left: 30px;
-        width: 80%;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
 
     .feature1-item {
@@ -1853,10 +1906,12 @@ a {
 
     .feature2 {
         width: 100%;
+        text-align: center;
     }
 
     .feature2-left {
         flex-direction: column;
+        text-align: center;
     }
 
     .feature2-left-l {
@@ -1873,29 +1928,35 @@ a {
 
     .feature2-left h2 {
         font-size: 16px;
+        margin: 0;
     }
 
     .feature2-left span {
         font-size: 12px;
+        margin: 0;
     }
 
     .feature2-detail h5 {
         font-size: 10px;
+        margin: 0;
     }
 
     .feature2-detail h4 {
         font-size: 20px;
+        margin: 0;
     }
 
     .feature2-detail p {
         font-size: 12px;
         line-height: 18px;
+        margin: 0;
     }
 
     .feature2-right {
-        margin-left: 10px;
+        margin: 0;
         width: 100%;
         background-size: cover;
+        text-align: center;
     }
 
     .feature2-right img {
@@ -1905,18 +1966,21 @@ a {
     .feature3-item img {
         width: 90%;
     }
+
     .feature3-item {
         align-items: center;
         text-align: center;
     }
+
     .app {
         flex-direction: column;
         width: 90%;
+        text-align: center;
     }
 
     .app-left {
-        margin-left: 0;
-        margin-bottom: 20px;
+        margin: 0;
+        padding: 0;
     }
 
     .app-right {
@@ -1926,6 +1990,7 @@ a {
     .store-icons {
         flex-direction: column;
         gap: 10px;
+        text-align: center;
     }
 
     .store-icons button {
@@ -1934,6 +1999,7 @@ a {
 
     .footer {
         width: 100%;
+        text-align: center;
     }
 
     .footer .container {
@@ -1943,13 +2009,14 @@ a {
 
     .footer .column {
         width: 100%;
-        margin: 10px 0;
+        margin: 0;
         text-align: center;
     }
 
     .footer .footer-logo {
         flex-direction: column;
         margin-bottom: 10px;
+        text-align: center;
     }
 
     .footer .footer-logo img {
@@ -1961,19 +2028,24 @@ a {
     .footer .footer-logo p1 {
         font-size: 28px;
         text-align: center;
+        margin: 0;
     }
 
     .footer .column p,
     .footer .column a {
         font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .footer .column h3 {
         font-size: 22px;
+        margin: 0;
     }
 
     .social-media-icon {
         justify-content: center;
+        text-align: center;
     }
 
     .social-media-icon a {
@@ -1984,7 +2056,7 @@ a {
     .copyright {
         font-size: 18px;
         padding: 10px;
-        flex-direction: column;
         text-align: center;
+        margin: 0;
     }
 }
